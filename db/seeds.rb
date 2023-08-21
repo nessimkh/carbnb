@@ -4,6 +4,8 @@ Vehicle.destroy_all
 User.destroy_all
 
 puts "Creating new Vehicles, User & Rentals whuuu"
+
+# Users
 sorina = User.create(
   first_name: "Sorina",
   last_name: "Tudor",
@@ -18,12 +20,16 @@ nessim = User.create(
   password: "123456"
 )
 
+
+# Vehicles
 sorinas_car = Vehicle.create(
   model: "Renault",
   transmission: "manuel",
   power_source: "stick",
   user_id: sorina.id)
 
+  
+  # Rentals
 Rental.create(
   start_time: "21/08/2023",
   end_time: "25/08/2023",
