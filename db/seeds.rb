@@ -22,13 +22,21 @@ nessim = User.create(
 
 
 # Vehicles
+10.times do
+  vehicle= Vehicle.create!(
+  model: Faker::Vehicle.make_and_model,
+  transmission: Faker::Vehicle.transmission,
+  power_source: Faker::Vehicle.fuel_type
+  )
+end
+
 sorinas_car = Vehicle.create(
   model: "Renault",
   transmission: "manuel",
   power_source: "stick",
   user_id: sorina.id)
 
-  
+
   # Rentals
 Rental.create(
   start_time: "21/08/2023",
