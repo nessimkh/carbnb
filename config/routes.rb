@@ -9,6 +9,4 @@ Rails.application.routes.draw do
   resources :vehicles do
     resources :rentals, only: [:new, :create,:show]
   end
-
 end
-# temporary comment

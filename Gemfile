@@ -79,3 +79,6 @@ group :test do
 end
 
 gem 'faker'
+
+# add new gem
+gem "cloudinary"
