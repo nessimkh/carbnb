@@ -26,6 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_160357) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -51,5 +53,3 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_160357) do
   add_foreign_key "rentals", "vehicles"
   add_foreign_key "vehicles", "users"
 end
-
-
