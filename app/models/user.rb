@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :vehicles
   has_many :rentals
-  validates :first_name, presence: true, uniqueness: true
-  validates :last_name, presence: true, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   has_one_attached :avatar
 end
