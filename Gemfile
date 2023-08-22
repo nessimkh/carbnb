@@ -80,3 +80,5 @@ end
 
 gem 'faker'
 
+# add new gem
+gem "cloudinary"
