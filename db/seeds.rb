@@ -22,11 +22,16 @@ nessim = User.create(
 
 
 # Vehicles
-10.times do
-  vehicle= Vehicle.create!(
+100.times do
+  vehicle = Vehicle.create!(
   model: Faker::Vehicle.make_and_model,
   transmission: Faker::Vehicle.transmission,
-  power_source: Faker::Vehicle.fuel_type
+  power_source: Faker::Vehicle.fuel_type,
+  color: Faker::Vehicle.color,
+  doors: Faker::Vehicle.door_count,
+  kilometer: Faker::Vehicle.kilometrage,
+  year: Faker::Vehicle.year,
+  license_plate: Faker::Vehicle.license_plate
   )
 end
 
