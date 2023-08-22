@@ -1,5 +1,9 @@
 class RentalsController < ApplicationController
   before_action :authenticate_user!
+  def show
+    @rental = Rental.find(params[:id])
+  end
+
   def new
     @vehicle = Vehicle.find(params[:vehicle_id])
     @rental = Rental.new
@@ -11,7 +15,7 @@ class RentalsController < ApplicationController
     @rental.vehicle = @vehicle
 
     if @rental.save
-      redirect_to @vehicle, notice: 'Rental was successfully created.'
+      redirect_to  vehicle_rental_path(@vehicle, @rental), notice: 'Rental was successfully created.'
     else
       render :new
     end

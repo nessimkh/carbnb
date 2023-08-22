@@ -1,0 +1,31 @@
+<div class="mx-auto p-2" style="width: 400px">
+<h2>List a car for rental</h2>
+<%= simple_form_for(@vehicle) do |f| %>
+
+  <div>
+
+    <%= f.input :model,
+                required: true,
+                autofocus: true%>
+    <%= f.input :transmission,
+                required: true%>
+    <%= f.input :power_source,
+                required: true%>
+    <%= f.input :color,
+                required: true%>
+    <%= f.input :doors,
+                required: true%>
+    <%= f.input :kilometer,
+                required: true%>
+    <%= f.input :year,
+                required: true%>
+    <%= f.input :license_plate,
+                required: true%>
+  </div>
+
+  <div>
+    <%= f.button :submit, "Submit" %>
+  </div>
+<% end %>
+
+</div>
