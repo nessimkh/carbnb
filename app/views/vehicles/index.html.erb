@@ -1,1 +1,19 @@
 <h1>HOMEPAGE</h1>
+
+
+<% @vehicles.each do |vehicle| %>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-model">
+      <%= vehicle.model%>
+    </h5>
+    <p class ="card-transmission">
+      <%= vehicle.transmission%>
+    </p>
+    <p class ="card-power_source">
+      <%= vehicle.power_source %>
+    </p>
+  </div>
+</div>
+<% end %>
