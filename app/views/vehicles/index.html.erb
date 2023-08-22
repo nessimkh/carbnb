@@ -14,6 +14,9 @@
     <p class ="card-power_source">
       <%= vehicle.power_source %>
     </p>
+     <p class ="card-power_source">
+        <%= link_to "Rent this car", vehicle_path(vehicle.id)%>
+    </p>
   </div>
 </div>
 <% end %>
