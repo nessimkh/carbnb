@@ -1,0 +1,9 @@
+<h1><%= @vehicle.model %></h1>
+<p>Transmission: <%= @vehicle.transmission %></p>
+<p>Power Source: <%= @vehicle.power_source %></p>
+
+<% if user_signed_in? %>
+  <%= link_to 'Rent this vehicle', new_vehicle_rental_path(@vehicle), class: 'btn btn-primary' %>
+<% else %>
+  <%= link_to 'Log in to rent', new_user_session_path, class: 'btn btn-primary' %>
+<% end %>
