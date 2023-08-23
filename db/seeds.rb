@@ -20,5 +20,3 @@ puts "Creating new Vehicles, User & Rentals whuuu"
   standard_km_rate: "0.98€/km"
   )
 end
-
-puts "Done!!"
