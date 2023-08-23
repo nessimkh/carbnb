@@ -43,8 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_23_104212) do
   end
 
   create_table "rentals", force: :cascade do |t|
-    t.string "start_time"
-    t.string "end_time"
+    t.date "start_time"
+    t.date "end_time"
     t.bigint "user_id", null: false
     t.bigint "vehicle_id", null: false
     t.datetime "created_at", null: false
