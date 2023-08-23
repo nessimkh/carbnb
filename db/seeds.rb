@@ -9,7 +9,7 @@ puts "Creating new Vehicles, User & Rentals whuuu"
 
 puts "Creating new User"
 # Users
-file = URI.open("https://w7.pngwing.com/pngs/514/813/png-transparent-child-computer-icons-avatar-user-avatar-child-face-orange-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1692035837984-64df95c64ef1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")
 sorina = User.new(
   first_name: "Sorina",
   last_name: "Tudor",
@@ -19,7 +19,7 @@ sorina = User.new(
 sorina.avatar.attach(io: file, filename: "sorina.png", content_type: "image/png")
 sorina.save
 
-file = URI.open("https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1692035837984-64df95c64ef1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")
 nessim = User.new(
   first_name: "Nessim",
   last_name: "Khayyat",
@@ -29,7 +29,7 @@ nessim = User.new(
 nessim.avatar.attach(io: file, filename: "nessim.png", content_type: "image/png")
 nessim.save
 
-file = URI.open("https://w7.pngwing.com/pngs/732/397/png-transparent-computer-icons-avatar-woman-user-avatar-child-face-heroes-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1692035837984-64df95c64ef1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")
 zuzanna = User.new(
   first_name: "Zuzanna",
   last_name: "Dobak",
@@ -139,7 +139,6 @@ p "Created #{Vehicle.count} cars in database"
 
 # Creating our Lists
 # List.create(name: "Car")
-
 # Creating our Rentals (because they are referencing the car lists)
 # Rental.create(comment: "A Nice Car", car: Car.create, list: List.create)
 
