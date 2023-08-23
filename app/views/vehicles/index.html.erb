@@ -28,7 +28,10 @@
               <%= vehicle.power_source %>
             </p>
             <p class ="card-power_source">
-              <%= link_to "Rent this car", vehicle_path(vehicle.id)%>
+              <%= vehicle.standard_km_rate %>
+            </p>
+            <p class ="card-power_source">
+              <%= link_to "See details", vehicle_path(vehicle.id)%>
             </p>
           </div>
         </div>
