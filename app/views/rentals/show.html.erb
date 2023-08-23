@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Confirmation</title>
+  <!-- Include Bootstrap CSS -->
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <h1 class="mb-0">Rental Confirmation</h1>
+      </div>
+      <div class="card-body">
+        <div class="alert">
+          <p><strong>Vehicle:</strong> <%= @rental.vehicle.model%></p>
+          <p><strong>Start Date:</strong> <%= @rental.start_time.strftime('%B %d, %Y') %></p>
+          <p><strong>End Date:</strong> <%= @rental.end_time.strftime('%B %d, %Y') %></p>
+        </div>
+        <p>Your rental has been confirmed. We look forward to hosting you!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS (optional) -->
+</body>
+</html>
