@@ -5,24 +5,9 @@ User.destroy_all
 
 puts "Creating new Vehicles, User & Rentals whuuu"
 
-# Users
-sorina = User.create(
-  first_name: "Sorina",
-  last_name: "Tudor",
-  email: "sorina@test.com",
-  password: "123456"
-)
-
-nessim = User.create(
-  first_name: "Nessim",
-  last_name: "Khayyat",
-  email: "nessim@test.com",
-  password: "123456"
-)
-
 
 # Vehicles
-100.times do
+12.times do
   vehicle = Vehicle.create!(
   model: Faker::Vehicle.make_and_model,
   transmission: Faker::Vehicle.transmission,
@@ -31,6 +16,7 @@ nessim = User.create(
   doors: Faker::Vehicle.door_count,
   kilometer: Faker::Vehicle.kilometrage,
   year: Faker::Vehicle.year,
-  license_plate: Faker::Vehicle.license_plate
+  license_plate: Faker::Vehicle.license_plate,
+  standard_km_rate: "0.98€/km"
   )
 end
