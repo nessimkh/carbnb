@@ -34,19 +34,3 @@ nessim = User.create(
   license_plate: Faker::Vehicle.license_plate
   )
 end
-
-sorinas_car = Vehicle.create(
-  model: "Renault",
-  transmission: "manuel",
-  power_source: "stick",
-  user_id: sorina.id)
-
-
-  # Rentals
-Rental.create(
-  start_time: "21/08/2023",
-  end_time: "25/08/2023",
-  vehicle: sorinas_car,
-  user: nessim)
-
-puts "Done!!"
