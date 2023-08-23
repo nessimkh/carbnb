@@ -12,6 +12,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+        <div data-controller="toggle" class="mt-5;">
+         <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a car to rent</button>
+          <div data-toggle-target="togglableElement" class="d-none">
+            <%= render "form", vehicle: @vehicle %>
+          </div>
+        </div>
           <li class="nav-item active">
             <%= link_to "Home", vehicles_path, class: "nav-link" %>
           </li>
@@ -23,7 +29,7 @@
               <%= cl_image_tag current_user.avatar.key, class: "avatar-rounded-circle", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Rentals list", vehicle_rentals_path(vehicle_id: Vehicle.find(1)), class: "dropdown-item" %>
+              <%= link_to "Rentals list", vehicle_rentals_path(:vehicle_id,:rentals), class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
