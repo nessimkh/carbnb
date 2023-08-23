@@ -61,7 +61,6 @@ puts "#{User.count } users in database"
 #   power_source: "stick",
 #   user_id: sorina.id)
 
-
   # Rentals
 # Rental.create(
 #   start_time: "21/08/2023",
