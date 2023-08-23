@@ -1,15 +1,16 @@
-<h1><%= @vehicle.model %></h1>
-<p>Transmission: <%= @vehicle.transmission %></p>
-<p>Power Source: <%= @vehicle.power_source %></p>
-<p>Color: <%= @vehicle.color%></p>
-<p>Doors: <%= @vehicle.doors%></p>
-<p>Kilometer: <%= @vehicle.kilometer %></p>
-<p>Year: <%= @vehicle.kilometer %></p>
-<p>License Plate: <%= @vehicle.license_plate %></p>
-
+<div class="mx-auto p-2" style="width: 400px">
+  <h1><%= @vehicle.model %></h1>
+  <p>Transmission: <%= @vehicle.transmission %></p>
+  <p>Power Source: <%= @vehicle.power_source %></p>
+  <p>Color: <%= @vehicle.color%></p>
+  <p>Doors: <%= @vehicle.doors%></p>
+  <p>Kilometer: <%= @vehicle.kilometer %></p>
+  <p>Year: <%= @vehicle.kilometer %></p>
+  <p>License Plate: <%= @vehicle.license_plate %></p>
+</div>
 
 <% if user_signed_in? %>
-  <%= link_to 'Rent this vehicle', new_vehicle_rental_path(@vehicle), class: 'btn btn-primary' %>
+  <%= link_to 'Rent this vehicle', new_vehicle_rental_path(@vehicle), class: 'btn btn-primary'  %>
 <% else %>
   <%= link_to 'Log in to rent', new_user_session_path, class: 'btn btn-primary' %>
 <% end %>
