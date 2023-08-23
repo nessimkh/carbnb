@@ -9,7 +9,7 @@ class VehiclesController < ApplicationController
   end
 
   def new
-      @vehicle = Vehicle.new
+    @vehicle = Vehicle.new
   end
 
   def create
@@ -22,7 +22,12 @@ class VehiclesController < ApplicationController
   end
 
   private
+
   def veh_params
-  params.require(:vehicle).permit(:model, :transmission, :power_source)
+    params.require(:vehicle).permit(:model, :transmission, :power_source, :photo)
+  end
+
+  def pic_params
+    params.require(:photo).permit(:title, :body, :photo)
   end
 end
