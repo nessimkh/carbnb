@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :vehicles, only: [:index, :new, :create, :show]
   resources :vehicles do
-    resources :rentals, only: [:new, :create,:show]
+    resources :rentals, only: [:index, :new, :create,:show]
   end
 end

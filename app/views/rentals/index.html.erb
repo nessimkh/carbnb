@@ -1,0 +1,18 @@
+ <div class="container mt-5">
+    <h1 class="mb-4">Rentals List</h1>
+    <div class="row">
+      <% @rentals.each do |rental| %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <%= rental.vehicle.model %>
+            </div>
+            <div class="card-body">
+              <p><strong>Start Date:</strong> <%=rental.start_time %></p>
+              <p><strong>End Date:</strong> <%=rental.end_time%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
