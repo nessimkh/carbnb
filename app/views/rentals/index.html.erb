@@ -8,11 +8,13 @@
               <%= rental.vehicle.model %>
             </div>
             <div class="card-body">
-              <p><strong>Start Date:</strong> <%=rental.start_time %></p>
-              <p><strong>End Date:</strong> <%=rental.end_time%></p>
+              <p><strong>Start Date:</strong> <%=rental.start_time.strftime("%B %d, %Y") %></p>
+              <p><strong>End Date:</strong> <%=rental.end_time.strftime("%B %d, %Y")%></p>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   </div>
+
+

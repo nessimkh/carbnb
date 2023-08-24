@@ -9,7 +9,7 @@ puts "Creating new Vehicles, User & Rentals whuuu"
 
 puts "Creating new User"
 # Users
-file = URI.open("https://w7.pngwing.com/pngs/514/813/png-transparent-child-computer-icons-avatar-user-avatar-child-face-orange-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80")
 sorina = User.new(
   first_name: "Sorina",
   last_name: "Tudor",
@@ -19,7 +19,7 @@ sorina = User.new(
 sorina.avatar.attach(io: file, filename: "sorina.png", content_type: "image/png")
 sorina.save
 
-file = URI.open("https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1608889825146-c9276dc26bdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80")
 nessim = User.new(
   first_name: "Nessim",
   last_name: "Khayyat",
@@ -29,7 +29,7 @@ nessim = User.new(
 nessim.avatar.attach(io: file, filename: "nessim.png", content_type: "image/png")
 nessim.save
 
-file = URI.open("https://w7.pngwing.com/pngs/732/397/png-transparent-computer-icons-avatar-woman-user-avatar-child-face-heroes-thumbnail.png")
+file = URI.open("https://images.unsplash.com/photo-1608889453743-bf8eabeb12fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80")
 zuzanna = User.new(
   first_name: "Zuzanna",
   last_name: "Dobak",
@@ -74,6 +74,7 @@ puts "Done!!"
 
 # Creating our Car DB
 puts "Creating Vehicles 🚘"
+
 file = URI.open("https://i.auto-bild.de/ir_img/7/8/4/6/2/0/Audi-A7-560x373-c58617547135dfc7.jpg")
 vehicle = Vehicle.new(model: "Audi A7", transmission: "Manual", power_source: "Electric", color: "White", doors: "5", kilometer: "87000", year: "2016", license_plate: "IN-A 7012")
 vehicle.photo.attach(io: file, filename: "audia7.jpg", content_type: "image/jpg")
@@ -87,6 +88,7 @@ vehicle.save
 # Car.create(model: "Buick Verano", transmission: "Automatic", power_source: "Diesel", color: "Red", doors: "5", kilometer: "99000", year: "2013", license plate: "B-SM 1287", photo: "https://carimage.org.test.jpg")
 
 file = URI.open("https://images7.alphacoders.com/106/1061367.jpg")
+
 vehicle = Vehicle.new(model: "Ford Focus", transmission: "Automatic", power_source: "Ethanol", color: "Blue", doors: "3", kilometer: "1000", year: "2023", license_plate: "M-LA 1385")
 vehicle.photo.attach(io: file, filename: "fordfocus.jpg", content_type: "image/jpg")
 vehicle.save
@@ -139,7 +141,6 @@ p "Created #{Vehicle.count} cars in database"
 
 # Creating our Lists
 # List.create(name: "Car")
-
 # Creating our Rentals (because they are referencing the car lists)
 # Rental.create(comment: "A Nice Car", car: Car.create, list: List.create)
 
