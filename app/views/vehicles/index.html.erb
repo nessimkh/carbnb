@@ -17,24 +17,26 @@
           <div class="card rounded-5">
             <% if vehicle.photo.attached? %>
               <%= cl_image_tag vehicle.photo.key, class: "car-pic-card mx-auto", height: 400, width: 600, crop: :fill %>
-             <% else %>
+            <% else %>
               <img src= 'https://showme0-9071.kxcdn.com/files/615692/pictures/thumbs/1399770/last_thumb1392620933.jpg' class="card-img-top-middle" alt="..." style="width:10rem; height:10rem">
-             <% end %>
+            <% end %>
             <div class="card-body">
               <h5 class="card-model">
                 <%= vehicle.model%>
               </h5>
-              <div class="text_styling">
-                <p class ="card-transmission">
-                  <%= vehicle.transmission%>
+              <div class="d-flex justify-content-between mt-4">
+                <div class="text_styling">
+                  <p class ="card-power_source">
+                    <%= vehicle.transmission %>
+                  </p>
+                </div>
+                <p class ="card-power_source">
+                  <%= vehicle.power_source %>
+                </p>
+                <p class="button-see-details">
+                  <%= link_to "See details", vehicle_path(vehicle.id), class: "a" %>
                 </p>
               </div>
-              <p class ="card-power_source">
-                <%= vehicle.power_source %>
-              </p>
-              <p class ="card-power_source btn btn-success btn-sm">
-                <%= link_to "See details", vehicle_path(vehicle.id), class: "a" %>
-              </p>
             </div>
           </div>
         </div>
