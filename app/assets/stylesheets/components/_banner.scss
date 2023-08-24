@@ -1,0 +1,19 @@
+
+.text-center{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 250px;
+  padding-bottom: 40px ;
+  color: rgb(59, 59, 59);
+  text-align: center;
+}
+
+.text-center:hover{
+  transition: 3s;
+  text-shadow:50px 50px 50px darkgrey;
+}
+.button-and-text{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 250px
+}
