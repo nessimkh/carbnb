@@ -1,9 +1,19 @@
 .a {
+  align-content: center;
   color: whitesmoke;
   text-decoration: none;
+  background-color: navy;
+  width:150px;
+  border-radius: 20px;
+  padding: 10px 32px;
+  text-align: center;
 }
 
 .a:hover {
   color: whitesmoke;
   text-decoration: none;
+}
+
+.button-see-details{
+  margin-top: 10px;
 }
