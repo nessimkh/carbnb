@@ -1,19 +1,43 @@
 
 .text-center{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Staatliches', cursive;
   padding-top: 250px;
-  padding-bottom: 40px ;
+  padding-bottom: 100px ;
   color: rgb(59, 59, 59);
   text-align: center;
+  text-shadow: 30px 30px 30px darkgrey
 }
 
 .text-center:hover{
   transition: 3s;
-  text-shadow:50px 50px 50px darkgrey;
+  text-shadow:50px 50px 50px rgb(104, 104, 104);
 }
+
 .button-and-text{
   display:flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 250px
+}
+
+#btn{
+  font-family:'Staatliches', cursive;
+  background-color: white;
+  color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 35px;
+  border:none;
+}
+
+#btn:hover{
+ border-radius: 10px;
+ transition: 0.5s;
+ background-color: rgb(236, 236, 236);
+ box-shadow: 10px 10px 10px darkgray;
+ box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+ padding-left: 70px;
+ padding-right: 70px;
 }

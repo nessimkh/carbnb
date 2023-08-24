@@ -9,7 +9,7 @@
     <p>Kilometer: <%= @vehicle.kilometer %></p>
     <p>Year: <%= @vehicle.kilometer %></p>
     <p>License Plate: <%= @vehicle.license_plate %></p>
-    
+
     <% if user_signed_in? %>
     <div data-controller="toggle" class="mt-5">
       <button data-action="click->toggle#fire" class="btn btn-outline-primary">Rent this vehicle</button>

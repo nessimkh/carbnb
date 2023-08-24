@@ -1,13 +1,16 @@
-<div class="button-and-text">
-  <h1 class="display-1 text-center">Leave the gun, take the cannoli</h1>
+<div class = 'background-image'>
+  <div class="button-and-text">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Staatliches&display=swap" rel="stylesheet">
+    <h1 class="display-1 text-center">LEAVE THE GUN, TAKE THE CANNOLI</h1>
 
-  <div data-controller="toggle" class="mt-5;">
-    <button data-action="click->toggle#fire" class="btn btn-outline-primary">List Your Car</button>
-    <div data-toggle-target="togglableElement" class="d-none">
-      <%= render "form", vehicle: @vehicle %>
+
+    <div data-controller="toggle" class="mt-5;">
+      <button data-action="click->toggle#fire" class="btn btn-outline-primary" id="btn">List Your "Legally Owned" Car</button>
+      <div data-toggle-target="togglableElement" class="d-none">
+        <%= render "form", vehicle: @vehicle %>
+      </div>
     </div>
   </div>
-</div>
 
 <div class="container">
   <% @vehicles.each_slice(2) do |vehicles| %>
@@ -39,8 +42,9 @@
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  </div>
 </div>
