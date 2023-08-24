@@ -88,7 +88,6 @@ vehicle.save
 # Car.create(model: "Buick Verano", transmission: "Automatic", power_source: "Diesel", color: "Red", doors: "5", kilometer: "99000", year: "2013", license plate: "B-SM 1287", photo: "https://carimage.org.test.jpg")
 
 file = URI.open("https://images7.alphacoders.com/106/1061367.jpg")
-
 vehicle = Vehicle.new(model: "Ford Focus", transmission: "Automatic", power_source: "Ethanol", color: "Blue", doors: "3", kilometer: "1000", year: "2023", license_plate: "M-LA 1385")
 vehicle.photo.attach(io: file, filename: "fordfocus.jpg", content_type: "image/jpg")
 vehicle.save
