@@ -11,7 +11,16 @@
     <p>License Plate: <%= @vehicle.license_plate %></p>
     
     <% if user_signed_in? %>
-    <%= link_to 'Rent this vehicle', new_vehicle_rental_path(@vehicle), class: 'btn btn-primary'  %>
+    <div data-controller="toggle" class="mt-5">
+      <button data-action="click->toggle#fire" class="btn btn-outline-primary">Rent this vehicle</button>
+        <div data-toggle-target="togglableElement" class="d-none mx-auto p-2" style="width: 400px">
+          <%= simple_form_for [@vehicle, @rental], data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :start_time, as: :date, input_html: { data: { flatpickr_target: "startTime" } } %>
+          <%= f.input :end_time, as: :date, input_html: { data: { flatpickr_target: "endTime" } } %>
+          <%= f.submit 'Confirm rental', class: 'btn btn-outline-primary' %>
+        </div>
+      <% end %>
+    </div>
     <% else %>
     <%= link_to 'Log in to rent', new_user_session_path, class: 'btn btn-primary' %>
     <% end %>

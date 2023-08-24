@@ -1,11 +1,14 @@
-<div data-controller="toggle" class="mt-5;">
-  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a car to rent</button>
-  <div data-toggle-target="togglableElement" class="d-none">
-    <%= render "form", vehicle: @vehicle %>
+<div class="button-and-text">
+  <h1 class="display-1 text-center">Leave the gun, take the cannoli</h1>
+
+  <div data-controller="toggle" class="mt-5;">
+    <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a car to rent</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "form", vehicle: @vehicle %>
+    </div>
   </div>
 </div>
 
-<h1 class="display-1 text-center">Welcome to CarBNB</h1>
 <div class="container">
   <% @vehicles.each_slice(2) do |vehicles| %>
     <div class="row row-col-3 g-2">
