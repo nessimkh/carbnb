@@ -14,10 +14,11 @@
 
 <div class="container">
   <% @vehicles.each_slice(2) do |vehicles| %>
-    <div class="row row-col-3 g-2">
+    <div class="row row-cols-2">
       <%vehicles.each do |vehicle|%>
         <div class="col car-card p-3">
           <div class="card rounded-5" id=car-card>
+
             <% if vehicle.photo.attached? %>
               <%= cl_image_tag vehicle.photo.key, class: "car-pic-card mx-auto", height: 400, width: 600, crop: :fill %>
             <% else %>
@@ -42,9 +43,8 @@
               </div>
             </div>
           </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-  </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
