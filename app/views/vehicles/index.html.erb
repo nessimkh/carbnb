@@ -7,13 +7,13 @@
 
 <h1 class="display-1 text-center">Welcome to CarBNB</h1>
 <div class="container">
-  <% @vehicles.each_slice(3) do |vehicles| %>
+  <% @vehicles.each_slice(2) do |vehicles| %>
     <div class="row row-col-3 g-2">
       <%vehicles.each do |vehicle|%>
-        <div class="col mx-auto car-card p-3">
+        <div class="col car-card p-3">
           <div class="card rounded-5">
             <% if vehicle.photo.attached? %>
-              <%= cl_image_tag vehicle.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag vehicle.photo.key, class: "car-pic-card mx-auto", height: 400, width: 600, crop: :fill %>
              <% else %>
               <img src= 'https://showme0-9071.kxcdn.com/files/615692/pictures/thumbs/1399770/last_thumb1392620933.jpg' class="card-img-top-middle" alt="..." style="width:10rem; height:10rem">
              <% end %>
