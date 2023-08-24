@@ -33,12 +33,11 @@
                   </p>
                 </div>
                 <p class ="card-power_source">
-                  <%= vehicle.power_source %>
-                </p>
-                <p class ="card-power_source">
-                  <%= link_to "See details", vehicle_path(vehicle.id)%>
-                </p>
-              </div>
+                <%= vehicle.power_source %>
+              </p>
+              <p class ="card-power_source btn btn-success btn-sm">
+                <%= link_to "See details", vehicle_path(vehicle.id), class: "a" %>
+              </p>
             </div>
           </div>
         <% end %>
