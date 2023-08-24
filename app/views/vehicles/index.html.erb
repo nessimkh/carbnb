@@ -2,7 +2,7 @@
   <h1 class="display-1 text-center">Leave the gun, take the cannoli</h1>
 
   <div data-controller="toggle" class="mt-5;">
-    <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a car to rent</button>
+    <button data-action="click->toggle#fire" class="btn btn-outline-primary">List Your Car</button>
     <div data-toggle-target="togglableElement" class="d-none">
       <%= render "form", vehicle: @vehicle %>
     </div>
@@ -29,7 +29,7 @@
                   <%= vehicle.transmission%>
                 </p>
               </div>
-              <p class ="card-poweource">
+              <p class ="card-power_source">
                 <%= vehicle.power_source %>
               </p>
               <p class ="card-power_source">
