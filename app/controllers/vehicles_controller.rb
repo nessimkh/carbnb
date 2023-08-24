@@ -7,6 +7,9 @@ class VehiclesController < ApplicationController
   def show
     @vehicle = Vehicle.find(params[:id])
     @rental = Rental.new
+    @rental_all = Rental.where(vehicle_id: @vehicle.id).pluck(:start_time, :end_time).map do |range|
+      { from: range[0], to: range[1] }
+    end
   end
 
   def new
