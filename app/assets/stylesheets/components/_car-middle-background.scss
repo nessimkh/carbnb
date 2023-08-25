@@ -1,21 +1,16 @@
 #main-container-details{
   background-image: url(car-middle-background.jpg);
   background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
-  margin: 0px;
-  opacity: 0.7;
+  opacity: 0.8;
   background-position: center;
 }
 
 #vehicle-details{
-  min-height: 100vh;
-  min-width: 100wh;
   text-align: center;
-  text-shadow: 20px whitesmoke;
+  box-shadow: 20px white;
   padding-top: 250px;
   font-size: 35px;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
 }
 
 #vehicle-model{
