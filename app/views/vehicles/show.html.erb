@@ -18,7 +18,7 @@
           <div  id='flat-booking-dates' data-unavailable="<%= @rental_all.to_json %>" ></div>
           <%= f.input :start_time, as: :date, input_html: { data: { flatpickr_target: "startTime" } } %>
           <%= f.input :end_time, as: :date, input_html: { data: { flatpickr_target: "endTime" } } %>
-          <%= f.submit 'Confirm rental', class: 'btn btn-outline-primary' %>
+          <%= f.submit 'Confirm rental', class: 'btn btn-outline-primary'%>
         </div>
       <% end %>
     </div>
