@@ -12,7 +12,7 @@
 
     <% if user_signed_in? %>
     <div data-controller="toggle" class="mt-5">
-      <button data-action="click->toggle#fire" class="btn btn-outline-primary">Rent this vehicle</button>
+      <button data-action="click->toggle#fire" class="btn btn-outline-warning">Rent this vehicle</button>
         <div data-toggle-target="togglableElement" class="d-none mx-auto p-2" style="width: 400px">
           <%= simple_form_for [@vehicle, @rental], data: { controller: 'flatpickr' } do |f| %>
           <div  id='flat-booking-dates' data-unavailable="<%= @rental_all.to_json %>" ></div>
