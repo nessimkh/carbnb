@@ -22,7 +22,7 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to vehicle_rental_path(@vehicle.id, @rental), notice: 'Rental was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

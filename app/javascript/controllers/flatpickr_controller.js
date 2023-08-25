@@ -8,6 +8,7 @@ export default class extends Controller {
   connect() {
     if (this.startTimeTarget) {
       const unavailableDates = JSON.parse(document.querySelector('#flat-booking-dates').dataset.unavailable)
+      console.log(unavailableDates)
       this.endTimeTarget.disabled = true
 
       flatpickr(this.startTimeTarget, {
@@ -24,8 +25,8 @@ export default class extends Controller {
           minDate: "today",
           disable: unavailableDates,
           dateFormat: "d-m-Y"
-          });
-        })
-      };
+        });
+      })
+    };
   }
 }
