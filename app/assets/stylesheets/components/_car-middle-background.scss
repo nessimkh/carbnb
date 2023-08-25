@@ -1,18 +1,35 @@
 #main-container-details{
-  background-image: url(car-middle-background.jpg);
-  background-size: cover;
-  opacity: 0.8;
+  display:flex;
+  background-image: url(rental-details-pic.jpg);
+  background-size:cover;
   background-position: center;
+  padding-top:90px;
+  align-items: center;
+  padding-bottom: 230px;
+  opacity:0.8;
+  justify-content:center;
 }
 
 #vehicle-details{
   text-align: center;
   box-shadow: 20px white;
-  padding-top: 250px;
-  font-size: 35px;
+  padding-top: 70px;
+  font-size: 15px;
   color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.6px);
+  -webkit-backdrop-filter: blur(9.6px);
+  width: 600px;
+  padding-bottom:50px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 25px;
+  font-family: 'Staatliches', cursive;
 }
 
 #vehicle-model{
   font-size: 60px;
+  font-family: 'Barrio', cursive;
 }

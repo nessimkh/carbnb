@@ -1,29 +1,32 @@
-<main class="container", id="main-container-details">
-<div id="vehicle-details">
-  <div>
-    <p id="vehicle-model"><%= @vehicle.model %></p>
-    <p>Transmission: <%= @vehicle.transmission %></p>
-    <p>Power Source: <%= @vehicle.power_source %></p>
-    <p>Color: <%= @vehicle.color%></p>
-    <p>Doors: <%= @vehicle.doors%></p>
-    <p>Kilometer: <%= @vehicle.kilometer %></p>
-    <p>Year: <%= @vehicle.kilometer %></p>
-    <p>License Plate: <%= @vehicle.license_plate %></p>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barrio&family=Noto+Sans+Indic+Siyaq+Numbers&family=Staatliches&display=swap" rel="stylesheet">
+<div id="main-container-details">
+  <div id="vehicle-details">
+    <div>
+      <p id="vehicle-model"><%= @vehicle.model %></p>
+      <p>Transmission: <%= @vehicle.transmission %></p>
+      <p>Power Source: <%= @vehicle.power_source %></p>
+      <p>Color: <%= @vehicle.color%></p>
+      <p>Doors: <%= @vehicle.doors%></p>
+      <p>Kilometer: <%= @vehicle.kilometer %></p>
+      <p>Year: <%= @vehicle.kilometer %></p>
+      <p>License Plate: <%= @vehicle.license_plate %></p>
 
-    <% if user_signed_in? %>
-    <div data-controller="toggle" class="mt-5">
-      <button data-action="click->toggle#fire" class="btn btn-outline-warning">Rent this vehicle</button>
-        <div data-toggle-target="togglableElement" class="d-none mx-auto p-2" style="width: 400px">
-          <%= simple_form_for [@vehicle, @rental], data: { controller: 'flatpickr' } do |f| %>
-          <div  id='flat-booking-dates' data-unavailable="<%= @rental_all.to_json %>" ></div>
-          <%= f.input :start_time, as: :date, input_html: { data: { flatpickr_target: "startTime" } } %>
-          <%= f.input :end_time, as: :date, input_html: { data: { flatpickr_target: "endTime" } } %>
-          <%= f.submit 'Confirm rental', class: 'btn btn-outline-primary'%>
-        </div>
+      <% if user_signed_in? %>
+      <div data-controller="toggle" class="mt-5">
+        <button data-action="click->toggle#fire" class="btn btn-outline-warning">Rent this vehicle</button>
+          <div data-toggle-target="togglableElement" class="d-none mx-auto p-2" style="width: 400px">
+            <%= simple_form_for [@vehicle, @rental], data: { controller: 'flatpickr' } do |f| %>
+            <div  id='flat-booking-dates' data-unavailable="<%= @rental_all.to_json %>" ></div>
+            <%= f.input :start_time, as: :date, input_html: { data: { flatpickr_target: "startTime" } } %>
+            <%= f.input :end_time, as: :date, input_html: { data: { flatpickr_target: "endTime" } } %>
+            <%= f.submit 'Confirm rental', class: 'btn btn-outline-primary'%>
+          </div>
+        <% end %>
+      </div>
+      <% else %>
+      <%= link_to 'Log in to rent', new_user_session_path, class: 'btn btn-primary' %>
       <% end %>
     </div>
-    <% else %>
-    <%= link_to 'Log in to rent', new_user_session_path, class: 'btn btn-primary' %>
-    <% end %>
   </div>
 </div>
