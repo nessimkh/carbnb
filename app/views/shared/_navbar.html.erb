@@ -13,13 +13,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <li class="nav-item active fs-6">
             <%= link_to "Home", vehicles_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
+          <li class="nav-item fs-6">
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
-          <li class="nav-item">
+          <li class="nav-item fs-6">
             <%= link_to "About Us", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
@@ -27,7 +27,7 @@
               <%= cl_image_tag current_user.avatar.key, class: "avatar-rounded-circle", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Rentals list", vehicle_rentals_path(:vehicle_id,:rentals), class: "dropdown-item" %>
+              <%= link_to "Rentals", vehicle_rentals_path(:vehicle_id,:rentals), class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
