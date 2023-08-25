@@ -1,32 +1,35 @@
-<div class="mx-auto p-2" style="width: 400px">
-<h2>Listing</h2>
-<%= simple_form_for(@vehicle) do |f| %>
 
-  <div>
+<div id="text-color">
+  <div class="mx-auto p-2" style="width: 400px">
+  <h2>Listing</h2>
+  <%= simple_form_for(@vehicle) do |f| %>
 
-    <%= f.input :model,
-                required: true,
-                autofocus: true%>
-    <%= f.input :transmission,
-                required: true%>
-    <%= f.input :power_source,
-                required: true%>
-    <%= f.input :color,
-                required: true%>
-    <%= f.input :doors,
-                required: true%>
-    <%= f.input :kilometer,
-                required: true%>
-    <%= f.input :year,
-                required: true%>
-    <%= f.input :license_plate,
-                required: true%>
-    <%= f.input :photo, as: :file%>
+    <div>
+
+      <%= f.input :model,
+                  required: true,
+                  autofocus: true%>
+      <%= f.input :transmission,
+                  required: true%>
+      <%= f.input :power_source,
+                  required: true%>
+      <%= f.input :color,
+                  required: true%>
+      <%= f.input :doors,
+                  required: true%>
+      <%= f.input :kilometer,
+                  required: true%>
+      <%= f.input :year,
+                  required: true%>
+      <%= f.input :license_plate,
+                  required: true%>
+      <%= f.input :photo, as: :file%>
+    </div>
+
+    <div id="submit">
+      <%= f.button :submit, "Submit" %>
+    </div>
+  <% end %>
+
   </div>
-
-  <div>
-    <%= f.button :submit, "Submit" %>
-  </div>
-<% end %>
-
 </div>
