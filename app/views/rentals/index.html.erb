@@ -1,8 +1,8 @@
  <div class="container mt-5">
-    <h1 class="mb-4">Rentals List</h1>
-    <div class="row">
+    <h1 class="text-center mb-4">Rentals List</h1>
+    <div class="row text-center ">
       <% @rentals.each do |rental| %>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-6 mb-5">
           <div class="card">
             <div class="card-header bg-success text-white">
               <%= rental.vehicle.model %>
@@ -16,5 +16,3 @@
       <% end %>
     </div>
   </div>
-
-
