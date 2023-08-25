@@ -5,22 +5,23 @@
   <!-- Include Bootstrap CSS -->
 </head>
 <body>
+<div class="main_body">
   <div class="container mt-5">
     <div class="card" id="confirmation-card">
-      <div class="card-header bg-success text-white">
+      <div class="card-header rounded-4 bg-dark text-white">
         <h1 class="mb-0">Rental Confirmation</h1>
       </div>
       <div class="card-body">
-        <div class="alert">
+        <div class="alert" id="dates">
           <p><strong>Vehicle:</strong> <%= @rental.vehicle.model%></p>
           <p><strong>Start Date:</strong> <%= @rental.start_time.strftime("%B %d, %Y") %></p>
           <p><strong>End Date:</strong> <%= @rental.end_time.strftime("%B %d, %Y")%></p>
         </div>
-        <p>Your rental has been confirmed. We look forward to aiding and abetting you!</p>
+        <p id="message">Your rental has been confirmed. We look forward to aiding and abetting you!</p>
       </div>
     </div>
   </div>
-
+</div>
   <!-- Include Bootstrap JS (optional) -->
 </body>
 </html>
